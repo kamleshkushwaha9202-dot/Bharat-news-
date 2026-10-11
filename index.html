@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta name="google-site-verification" content="K_nUxUI85tCOXRNDK-YMElamrAi6FH5FAWNDxp7fTFs" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#b91c1c">
+<meta name="description" content="Bharat News — भारत और मध्य प्रदेश की खबरें हिंदी और English में।">
+<title>Bharat News | India & Madhya Pradesh</title>
+
+<style>
+:root{
+  --red:#b91c1c;
+  --red2:#dc2626;
+  --ink:#172033;
+  --muted:#64748b;
+  --line:#e5e7eb;
+  --paper:#f4f6f9;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+}
+button,input{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer}
+.wrap{width:min(1180px,94%);margin:auto}
+.topline{background:#161b28;color:#fff;font-size:12px}
+.topline-inner{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:12px;padding:7px 0;flex-wrap:wrap
+}
+.masthead{background:#fff;border-bottom:1px solid var(--line)}
+.masthead-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:17px 0
+}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{
+  display:grid;place-items:center;width:47px;height:47px;
+  background:var(--red);color:#fff;border-radius:10px;
+  font-size:23px;font-weight:900
+}
+.brand-name{font-size:28px;font-weight:900;letter-spacing:-1px;line-height:1.15}
+.brand-name span{color:var(--red)}
+.tagline{font-size:12px;color:var(--muted);margin-top:4px}
+.header-actions{display:flex;gap:8px;align-items:center}
+.btn{
+  border:0;border-radius:8px;background:var(--red);color:#fff;
+  padding:10px 14px;font-weight:700;display:inline-flex;
+  justify-content:center;align-items:center;gap:7px
+}
+.btn:hover{background:#991b1b}
+.btn-light{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-light:hover{background:#f1f5f9;color:var(--ink)}
+.icon-btn{
+  width:40px;height:40px;border:1px solid var(--line);
+  background:#fff;border-radius:8px;font-size:19px
+}
+.navbar{background:#fff;border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.navlink{
+  display:block;padding:12px 13px;border:0;background:transparent;
+  color:#374151;font-weight:700;font-size:13px
+}
+.navlink:hover,.navlink.active{color:var(--red);background:#fff1f2}
+.mobile-menu{display:none}
+.breaking{
+  background:var(--red);color:#fff;display:flex;align-items:stretch;
+  overflow:hidden;border-radius:4px;margin:17px auto
+}
+.breaking-label{
+  flex:none;background:#7f1d1d;padding:9px 13px;
+  font-size:12px;font-weight:900;letter-spacing:.5px
+}
+.breaking-text{padding:8px 12px;font-size:13px;font-weight:700}
+.page-grid{
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  gap:24px;align-items:start;padding-bottom:45px
+}
+.section-title{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:12px;border-bottom:2px solid var(--ink);margin-bottom:17px;
+  padding-bottom:9px
+}
+.section-title h2{font-size:20px;margin:0}
+.section-title small{color:var(--muted)}
+.hero-grid{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-bottom:28px
+}
+.lead-card,.side-lead,.news-card,.side-box{
+  background:#fff;border:1px solid var(--line);border-radius:10px;
+  overflow:hidden
+}
+.news-image{
+  display:block;width:100%;aspect-ratio:16/9;object-fit:cover;
+  background:#e2e8f0
+}
+.lead-body{padding:17px}
+.kicker{
+  display:inline-block;background:#fff1f2;color:var(--red);
+  font-size:11px;font-weight:900;padding:4px 8px;border-radius:4px;
+  text-transform:uppercase
+}
+.lead-body h2{font-size:clamp(21px,3vw,30px);line-height:1.3;margin:10px 0}
+.lead-body p,.news-body p{font-size:13px;color:var(--muted);margin:8px 0}
+.meta{font-size:11px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+.side-lead{margin-bottom:14px}
+.side-lead .news-image{aspect-ratio:16/9}
+.side-lead .lead-body{padding:13px}
+.side-lead h3{font-size:16px;line-height:1.4;margin:8px 0}
+.feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.news-card{display:flex;flex-direction:column}
+.news-card .news-image{aspect-ratio:16/9}
+.news-body{padding:13px;display:flex;flex-direction:column;flex:1}
+.news-body h3{font-size:16px;line-height:1.4;margin:9px 0 5px}
+.news-body .meta{margin-top:auto;padding-top:9px}
+.read-link{
+  border:0;background:transparent;color:var(--red);
+  padding:10px 0 0;text-align:left;font-weight:800;font-size:13px
+}
+.sidebar{display:grid;gap:18px}
+.side-box{padding:16px}
+.side-box h3{font-size:17px;margin:0 0 13px}
+.trend-item{
+  display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);
+  cursor:pointer
+}
+.trend-item:last-child{border-bottom:0}
+.trend-number{font-size:24px;color:#cbd5e1;font-weight:900}
+.trend-item h4{font-size:13px;line-height:1.4;margin:0}
+.trend-item p{font-size:11px;color:var(--muted);margin:4px 0 0}
+.search-box{display:flex;gap:7px;margin-bottom:20px}
+.search-box input{
+  min-width:0;flex:1;border:1px solid #d1d5db;background:#fff;
+  padding:11px 12px;border-radius:8px;outline:none
+}
+.search-box input:focus{border-color:var(--red)}
+.categories{
+  display:flex;gap:8px;overflow-x:auto;padding:2px 0 14px;
+  margin-bottom:14px;scrollbar-width:thin
+}
+.cat-btn{
+  flex:none;border:1px solid #dce1e8;border-radius:25px;background:#fff;
+  padding:8px 13px;font-size:12px;font-weight:700;color:#374151
+}
+.cat-btn.active,.cat-btn:hover{
+  background:var(--red);border-color:var(--red);color:#fff
+}
+.empty{
+  display:none;background:#fff;padding:25px;border-radius:9px;
+  text-align:center;color:var(--muted)
+}
+footer{background:#151b29;color:#fff;padding:30px 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr;gap:25px}
+footer p,footer a{font-size:13px;color:#cbd5e1}
+footer h3{margin:0 0 8px}
+.footer-links{display:flex;gap:12px;flex-wrap:wrap}
+.disclaimer{font-size:11px;color:#94a3b8;border-top:1px solid #374151;padding-top:14px;margin-top:20px}
+.modal{
+  display:none;position:fixed;inset:0;z-index:50;
+  background:#0f172acc;padding:16px;overflow-y:auto
+}
+.modal.open{display:block}
+.modal-panel{
+  background:#fff;max-width:760px;margin:20px auto;
+  border-radius:12px;overflow:hidden
+}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 17px;border-bottom:1px solid var(--line)
+}
+.modal-content{padding:20px}
+.modal-content h1{font-size:clamp(24px,5vw,36px);line-height:1.25}
+.modal-content p{font-size:16px;line-height:1.85}
+.modal-content .news-image{border-radius:8px}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.hidden{display:none!important}
+@media(min-width:900px){
+  .hero-grid .lead-card .news-image{aspect-ratio:16/9}
+}
+@media(max-width:800px){
+  .page-grid{grid-template-columns:1fr}
+  .sidebar{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-grid{grid-template-columns:1.15fr 1fr}
+}
+@media(max-width:560px){
+  .wrap{width:94%}
+  .masthead-inner{padding:13px 0}
+  .brand-mark{width:40px;height:40px;font-size:19px}
+  .brand-name{font-size:23px}
+  .tagline{font-size:10px}
+  .header-actions .btn{padding:9px;font-size:12px}
+  .navbar .nav-inner{display:none;padding-bottom:8px}
+  .navbar.menu-open .nav-inner{display:flex}
+  .mobile-menu{display:inline-flex}
+  .navbar .navlink{padding:9px 10px}
+  .breaking{margin:12px auto}
+  .breaking-label{padding:8px;font-size:10px}
+  .breaking-text{font-size:11px}
+  .hero-grid{grid-template-columns:1fr}
+  .feed{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .news-body{padding:10px}
+  .news-body h3{font-size:14px}
+  .news-body p{font-size:12px}
+  .meta{font-size:10px}
+  .sidebar{grid-template-columns:1fr}
+  .lead-body{padding:13px}
+  .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+<div class="topline">
+  <div class="wrap topline-inner">
+    <span id="todayDate">भारत की ताज़ा खबरें</span>
+    <span>India • Madhya Pradesh • विश्वसनीय पत्रकारिता</span>
+  </div>
+</div>
+
+<header class="masthead">
+      <div class="header-actions">
+      <!-- Yeh naya Admin Panel ka button jodd dein -->
+      <a class="btn btn-light" href="admin.html">⚙️ Admin</a>
+    
+    </div>
+
+  <div class="wrap masthead-inner">
+    <a class="brand" href="#" id="homeBrand" aria-label="Bharat News Home">
+      <span class="brand-mark">BN</span>
+      <span>
+        <span class="brand-name">BHARAT <span>NEWS</span></span>
+        <span class="tagline" id="tagline">देश की खबर, आपकी नज़र</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button class="btn btn-light" id="languageBtn">English</button>
+      <button class="icon-btn mobile-menu" id="menuBtn" aria-label="मेन्यू खोलें">☰</button>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar" id="navbar">
+  <div class="wrap nav-inner" id="navCategories">
+    <button class="navlink active" data-cat="All">होम</button>
+    <button class="navlink" data-cat="India">देश</button>
+    <button class="navlink" data-cat="Madhya Pradesh">मध्य प्रदेश</button>
+    <button class="navlink" data-cat="Politics">राजनीति</button>
+    <button class="navlink" data-cat="Business">बिजनेस</button>
+    <button class="navlink" data-cat="Sports">खेल</button>
+    <button class="navlink" data-cat="Technology">टेक्नोलॉजी</button>
+    <button class="navlink" data-cat="Entertainment">मनोरंजन</button>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="breaking">
+    <span class="breaking-label" id="breakingLabel">ताज़ा अपडेट</span>
+    <span class="breaking-text" id="breakingText">
+      Bharat News पोर्टल पर आपका स्वागत है। यहाँ पढ़ें देश और दुनिया की ताजा खबरें।
+    </span>
+  </div>
+
+  <div class="search-box">
+    <input id="searchInput" type="search"
+      placeholder="खबर खोजें... Search news"
+      aria-label="खबर खोजें">
+    <button class="btn" id="searchBtn">खोजें</button>
+  </div>
+
+  <div class="categories" id="categoryButtons">
+    <button class="cat-btn active" data-cat="All">सभी खबरें</button>
+    <button class="cat-btn" data-cat="India">India</button>
+    <button class="cat-btn" data-cat="Madhya Pradesh">MP</button>
+    <button class="cat-btn" data-cat="Politics">Politics</button>
+    <button class="cat-btn" data-cat="Business">Business</button>
+    <button class="cat-btn" data-cat="Sports">Sports</button>
+    <button class="cat-btn" data-cat="Technology">Technology</button>
+    <button class="cat-btn" data-cat="Entertainment">Entertainment</button>
+  </div>
+
+  <div class="page-grid">
+    <main>
+      <section>
+        <div class="section-title">
+          <h2 id="topStoriesTitle">मुख्य खबरें</h2>
+          <small id="demoLabel">प्रमुख अपडेट</small>
+        </div>
+
+        <div class="hero-grid" id="heroGrid"></div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <h2 id="latestTitle">लेटेस्ट खबरें</h2>
+          <small id="resultCount"></small>
+        </div>
+        <div class="feed" id="newsFeed"></div>
+        <div class="empty" id="emptyState">
+          <h3 id="emptyTitle">कोई खबर नहीं मिली</h3>
+          <p id="emptyText">दूसरा शब्द लिखकर खोजें या कैटेगरी बदलें।</p>
+          <button class="btn" id="resetBtn">सभी खबरें देखें</button>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <section class="side-box">
+        <h3 id="trendingTitle">लोकप्रिय खबरें</h3>
+        <div id="trendingList"></div>
+      </section>
+      <section class="side-box">
+        <h3 id="aboutTitle">Bharat News के बारे में</h3>
+        <p id="aboutText" style="font-size:13px">
+          भारत और मध्य प्रदेश की निष्पक्ष और सटीक खबरों के लिए एक विश्वसनीय डिजिटल न्यूज़ प्लेटफॉर्म।
+        </p>
+        <hr style="border:0;border-top:1px solid var(--line);margin:15px 0">
+        <h3 id="languageTitle">भाषा चुनें</h3>
+        <button class="btn btn-light" id="languageBtn2">हिंदी / English</button>
+      </section>
+      <section class="side-box">
+        <h3 id="shareTitle">Bharat News शेयर करें</h3>
+        <p id="shareText" style="font-size:13px">इस न्यूज़ वेबसाइट का लिंक अपने दोस्तों और परिवार के साथ साझा करें।</p>
+        <button class="btn" id="shareSiteBtn">शेयर करें ↗</button>
+      </section>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-name">BHARAT <span style="color:#f87171">NEWS</span></div>
+        <p id="footerDesc">भारत और मध्य प्रदेश की खबरें — हिंदी और English में।</p>
+      </div>
+      <div>
+        <h3 id="quickLinksTitle">Quick Links</h3>
+        <div class="footer-links">
+          <a href="#" id="footerHome">होम</a>
+          <a href="#latestTitle" id="footerLatest">लेटेस्ट खबरें</a>
+          <a href="#aboutTitle" id="footerAbout">हमारे बारे में</a>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer" id="footerDisclaimer">
+      अस्वीकरण: Bharat News पोर्टल पर प्रकाशित सभी समाचार और जानकारी विभिन्न विश्वसनीय स्रोतों से प्राप्त की जाती है। किसी भी त्रुटि के लिए प्रबंधन जिम्मेदार नहीं है।
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="articleModal" role="dialog"
+  aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-panel">
+    <div class="modal-head">
+      <strong id="modalBrand">BHARAT NEWS</strong>
+      <button class="icon-btn" id="closeModal" aria-label="बंद करें">✕</button>
+    </div>
+    <article class="modal-content" id="modalContent"></article>
+  </div>
+</div>
+
+<!-- Firebase SDK Imports & Main Logic -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+  // Aapki Firebase Configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCXJvWSLU8pZMDRjayMLZIycOsTBXSGQ9g",
+    authDomain: "bharat-news-3c1d6.firebaseapp.com",
+    projectId: "bharat-news-3c1d6",
+    storageBucket: "bharat-news-3c1d6.firebasestorage.app",
+    messagingSenderId: "821381125211",
+    appId: "1:821381125211:web:6ffc34f088a33576e29b7e",
+    measurementId: "G-ZVXYE9WXWQ"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  let articles = [];
+  let language = "hi";
+  let activeCategory = "All";
+  let searchTerm = "";
+  let currentArticle = null;
+
+  const $ = id => document.getElementById(id);
+
+  function titleOf(article){
+    if(article[language] && article[language].title) return article[language].title;
+    return article.hi ? article.hi.title : "News";
+  }
+  function summaryOf(article){
+    if(article[language] && article[language].summary) return article[language].summary;
+    return article.hi ? article.hi.summary : "";
+  }
+  function categoryName(cat){
+    const hi = {
+      All:"सभी खबरें", India:"देश", "Madhya Pradesh":"मध्य प्रदेश",
+      Politics:"राजनीति", Business:"बिजनेस", Sports:"खेल",
+      Technology:"टेक्नोलॉजी", Entertainment:"मनोरंजन"
+    };
+    return language==="hi" ? (hi[cat]||cat) : (cat==="All"?"All News":cat);
+  }
+  function esc(text){
+    return String(text || "").replace(/[&<>"']/g, ch => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+    }[ch]));
+  }
+  function cardImage(article){
+    const imgSrc = article.image && article.image.trim() !== "" ? article.image : "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=900&q=80";
+    return `<img class="news-image" src="${esc(imgSrc)}"
+    alt="${esc(titleOf(article))}" loading="lazy"
+    onerror="this.style.display='none'">`;
+  }
+  function cardHTML(article,featured=false){
+    const cls = featured ? "side-lead" : "news-card";
+    return `<article class="${cls}">
+     ${cardImage(article)}
+     <div class="${featured?"lead-body":"news-body"}">
+      <span class="kicker">${esc(categoryName(article.cat))}</span>
+      <h3>${esc(titleOf(article))}</h3>
+      <p>${esc(summaryOf(article))}</p>
+      <div class="meta"><span>Bharat News</span><span>${esc(article.date || "ताज़ा अपडेट")}</span></div>
+      <button class="read-link" data-read="${article.id}">
+       ${language==="hi"?"पूरा लेख पढ़ें →":"Read full story →"}
+      </button>
+     </div>
+    </article>`;
+  }
+  function getFiltered(){
+    return articles.filter(a=>{
+      const matchesCategory = activeCategory==="All" || a.cat === activeCategory;
+      const hiTitle = a.hi ? a.hi.title : "";
+      const hiSummary = a.hi ? a.hi.summary : "";
+      const enTitle = a.en ? a.en.title : "";
+      const enSummary = a.en ? a.en.summary : "";
+      const haystack = (hiTitle + " " + hiSummary + " " + enTitle + " " + enSummary + " " + (a.cat || "")).toLowerCase();
+      const matchesSearch = !searchTerm || haystack.includes(searchTerm.toLowerCase());
+      return matchesCategory && matchesSearch;
+    });
+  }
+
+  function render(){
+    const filtered = getFiltered();
+    const hero = $("heroGrid");
+    const feed = $("newsFeed");
+    const hasSearch = !!searchTerm || activeCategory !== "All";
+
+    if(!hasSearch){
+      hero.innerHTML = filtered.length
+       ? `<div class="lead-card">
+           ${cardImage(filtered[0])}
+           <div class="lead-body">
+            <span class="kicker">${esc(categoryName(filtered[0].cat))}</span>
+            <h2>${esc(titleOf(filtered[0]))}</h2>
+            <p>${esc(summaryOf(filtered[0]))}</p>
+            <div class="meta"><span>Bharat News</span><span>${esc(filtered[0].date || "ताज़ा अपडेट")}</span></div>
+            <button class="btn" style="margin-top:14px" data-read="${filtered[0].id}">
+             ${language==="hi"?"पूरी खबर पढ़ें":"Read full story"}
+            </button>
+           </div>
+          </div>
+          <div>${filtered.slice(1,3).map(a=>cardHTML(a,true)).join("")}</div>`
+       : "";
+    }else{
+      hero.innerHTML = "";
+    }
+    const shown = hasSearch ? filtered : filtered.slice(3);
+    feed.innerHTML = shown.map(a=>cardHTML(a)).join("");
+    $("emptyState").style.display = filtered.length ? "none" : "block";
+    $("resultCount").textContent = language==="hi"
+     ? `${filtered.length} खबरें` : `${filtered.length} stories`;
+    
+    $("trendingList").innerHTML = articles.slice(0,5).map((a,i)=>
+     `<div class="trend-item" data-read="${a.id}" role="button" tabindex="0">
+      <span class="trend-number">0${i+1}</span>
+      <div><h4>${esc(titleOf(a))}</h4><p>${esc(categoryName(a.cat))}</p></div>
+     </div>`
+    ).join("");
+    updateCategoryButtons();
+  }
+
+  function updateCategoryButtons(){
+    document.querySelectorAll("[data-cat]").forEach(btn=>{
+      const active = btn.dataset.cat === activeCategory;
+      btn.classList.toggle("active", active);
+    });
+  }
+
+  window.openArticle = function(id){
+    const article = articles.find(a=>String(a.id) === String(id));
+    if(!article) return;
+    currentArticle = article;
+    
+    const articleLang = article[language] || article.hi || {};
+
+    $("modalContent").innerHTML=`
+     <span class="kicker">${esc(categoryName(article.cat))}</span>
+     <h1 id="modalTitle">${esc(titleOf(article))}</h1>
+     <div class="meta"><span>Bharat News</span><span>${esc(article.date || "ताज़ा अपडेट")}</span></div>
+     <div style="margin:18px 0">${cardImage(article)}</div>
+     <p><strong>${esc(summaryOf(article))}</strong></p>
+     <p>${esc(articleLang.body || "")}</p>
+     ${article.source ? `<p style="font-size:12px;color:var(--muted);margin-top:15px;"><strong>स्रोत / Source:</strong> ${esc(article.source)}</p>` : ''}
+     <div class="modal-actions">
+      <button class="btn" id="shareArticleBtn">${language==="hi"?"खबर शेयर करें ↗":"Share story ↗"}</button>
+      <button class="btn btn-light" id="closeArticleBtn">${language==="hi"?"वापस जाएँ":"Go back"}</button>
+     </div>`;
+    $("articleModal").classList.add("open");
+    document.body.style.overflow = "hidden";
+    $("shareArticleBtn").addEventListener("click", ()=>shareArticle(article));
+    $("closeArticleBtn").addEventListener("click", closeArticle);
+  }
+
+  function closeArticle(){
+    $("articleModal").classList.remove("open");
+    document.body.style.overflow = "";
+    currentArticle = null;
+  }
+
+  async function shareText(text,url){
+    try{
+      if(navigator.share){
+        await navigator.share({title:"Bharat News",text,url});
+      }else if(navigator.clipboard && window.isSecureContext){
+        await navigator.clipboard.writeText(text+" "+url);
+        alert(language==="hi"?"शेयर टेक्स्ट कॉपी हो गया।":"Share text copied.");
+      }else{
+        window.prompt(language==="hi"?"इस लिंक को कॉपी करें":"Copy this link",url);
+      }
+    }catch(err){
+      if(err.name!=="AbortError") {
+        window.prompt(language==="hi"?"लिंक कॉपी करें":"Copy link",url);
+      }
+    }
+  }
+
+  function shareArticle(article){
+    shareText(titleOf(article), location.href.split("#")[0]+"#article-"+article.id);
+  }
+
+  function setCategory(cat){
+    activeCategory = cat;
+    searchTerm = "";
+    $("searchInput").value = "";
+    render();
+    $("latestTitle").scrollIntoView({behavior:"smooth",block:"start"});
+    $("navbar").classList.remove("menu-open");
+  }
+
+  function runSearch(){
+    searchTerm = $("searchInput").value.trim();
+    render();
+  }
+
+  function toggleLanguage(){
+    language = language==="hi" ? "en" : "hi";
+    document.documentElement.lang = language==="hi" ? "hi" : "en";
+    $("languageBtn").textContent = language==="hi" ? "English" : "हिंदी";
+    $("languageBtn2").textContent = language==="hi" ? "हिंदी / English" : "Hindi / English";
+    $("tagline").textContent = language==="hi" ? "देश की खबर, आपकी नज़र" : "News that matters to you";
+    $("breakingLabel").textContent = language==="hi" ? "ताज़ा अपडेट" : "LATEST UPDATE";
+    $("breakingText").textContent = language==="hi"
+     ? "Bharat News पोर्टल पर आपका स्वागत है। यहाँ पढ़ें देश और दुनिया की ताजा खबरें।"
+     : "Welcome to the Bharat News portal. Read the latest news from India and the world.";
+    $("topStoriesTitle").textContent = language==="hi" ? "मुख्य खबरें" : "Top Stories";
+    $("demoLabel").textContent = language==="hi" ? "प्रमुख अपडेट" : "Featured Update";
+    $("latestTitle").textContent = language==="hi" ? "लेटेस्ट खबरें" : "Latest News";
+    $("emptyTitle").textContent = language==="hi" ? "कोई खबर नहीं मिली" : "No stories found";
+    $("emptyText").textContent = language==="hi"
+     ? "दूसरा शब्द लिखकर खोजें या कैटेगरी बदलें."
+     : "Try another search term or choose a different category.";
+    $("resetBtn").textContent = language==="hi" ? "सभी खबरें देखें" : "Show all news";
+    $("trendingTitle").textContent = language==="hi" ? "लोकप्रिय खबरें" : "Popular Stories";
+    $("aboutTitle").textContent = language==="hi" ? "Bharat News के बारे में" : "About Bharat News";
+    $("aboutText").textContent = language==="hi"
+     ? "भारत और मध्य प्रदेश की निष्पक्ष और सटीक खबरों के लिए एक विश्वसनीय डिजिटल न्यूज़ प्लेटफॉर्म।"
+     : "A reliable digital news platform for fair and accurate news from India and Madhya Pradesh.";
+    $("languageTitle").textContent = language==="hi" ? "भाषा चुनें" : "Choose Language";
+    $("shareTitle").textContent = language==="hi" ? "Bharat News शेयर करें" : "Share Bharat News";
+    $("shareText").textContent = language==="hi"
+     ? "इस न्यूज़ वेबसाइट का लिंक अपने दोस्तों और परिवार के साथ साझा करें."
+     : "Share this news website with your friends and family.";
+    $("shareSiteBtn").textContent = language==="hi" ? "शेयर करें ↗" : "Share ↗";
+    $("footerDesc").textContent = language==="hi"
+     ? "भारत और मध्य प्रदेश की खबरें — हिंदी और English में."
+     : "India and Madhya Pradesh news in Hindi and English.";
+    $("quickLinksTitle").textContent = language==="hi" ? "जरूरी लिंक" : "Quick Links";
+    $("footerHome").textContent = language==="hi" ? "होम" : "Home";
+    $("footerLatest").textContent = language==="hi" ? "लेटेस्ट खबरें" : "Latest News";
+    $("footerAbout").textContent = language==="hi" ? "हमारे बारे में" : "About Us";
+    $("footerDisclaimer").textContent = language==="hi"
+     ? "अस्वीकरण: Bharat News पोर्टल पर प्रकाशित सभी समाचार और जानकारी विभिन्न विश्वसनीय स्रोतों से प्राप्त की जाती है। किसी भी त्रुटि के लिए प्रबंधन जिम्मेदार नहीं है।"
+     : "Disclaimer: All news and information published on the Bharat News portal are sourced from various reliable channels. Management is not responsible for any inadvertent errors.";
+    $("searchInput").placeholder = language==="hi" ? "खबर खोजें... Search news" : "Search news...";
+    $("searchBtn").textContent = language==="hi" ? "खोजें" : "Search";
+    
+    document.querySelectorAll("#navCategories [data-cat]").forEach(btn=>{
+      btn.textContent = categoryName(btn.dataset.cat);
+    });
+    document.querySelectorAll("#categoryButtons [data-cat]").forEach(btn=>{
+      btn.textContent = categoryName(btn.dataset.cat);
+    });
+    render();
+    if(currentArticle) openArticle(currentArticle.id);
+  }
+
+  // Firebase se news load karne ka main function
+  async function fetchFirebaseNews(){
+    try {
+      const q = query(collection(db, "news_articles"), orderBy("createdAt", "desc"));
+      const querySnapshot = await getDocs(q);
+      
+      const firestoreArticles = [];
+      querySnapshot.forEach((docSnap) => {
+        firestoreArticles.push({ id: docSnap.id, ...docSnap.data() });
+      });
+
+      // Agar Firebase me news hain, toh unhe display karein
+      if(firestoreArticles.length > 0) {
+        articles = firestoreArticles;
+      }
+      render();
+    } catch(error) {
+      console.error("Firebase se news load karne me error: ", error);
+      render();
+    }
+  }
+
+  document.addEventListener("click", event=>{
+    const readBtn = event.target.closest("[data-read]");
+    if(readBtn){ openArticle(readBtn.dataset.read); return; }
+    const catBtn = event.target.closest("[data-cat]");
+    if(catBtn){ setCategory(catBtn.dataset.cat); return; }
+  });
+
+  document.addEventListener("keydown", event=>{
+    const item = event.target.closest(".trend-item");
+    if(item && (event.key==="Enter"||event.key===" ")){
+      event.preventDefault(); openArticle(item.dataset.read);
+    }
+    if(event.key==="Escape") closeArticle();
+  });
+
+  $("searchBtn").addEventListener("click", runSearch);
+  $("searchInput").addEventListener("keydown", e=>{
+    if(e.key==="Enter") runSearch();
+  });
+  $("resetBtn").addEventListener("click", ()=>{
+    activeCategory = "All"; searchTerm = "";
+    $("searchInput").value = ""; render();
+  });
+  $("languageBtn").addEventListener("click", toggleLanguage);
+  $("languageBtn2").addEventListener("click", toggleLanguage);
+  $("menuBtn").addEventListener("click", ()=>{
+    $("navbar").classList.toggle("menu-open");
+  });
+  $("closeModal").addEventListener("click", closeArticle);
+  $("articleModal").addEventListener("click", e=>{
+    if(e.target === $("articleModal")) closeArticle();
+  });
+  $("shareSiteBtn").addEventListener("click", ()=>{
+    shareText("Bharat News — India and Madhya Pradesh", location.href.split("#")[0]);
+  });
+  $("homeBrand").addEventListener("click", e=>{
+    e.preventDefault();
+    activeCategory = "All"; searchTerm = "";
+    $("searchInput").value = ""; render();
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+  $("footerHome").addEventListener("click", e=>{
+    e.preventDefault(); window.scrollTo({top:0, behavior:"smooth"});
+  });
+
+  const now = new Date();
+  $("todayDate").textContent = now.toLocaleDateString(
+    "hi-IN", {weekday:"long", day:"numeric", month:"long", year:"numeric"}
+  );
+
+  // Page khulte hi Firebase se data fetch karein
+  fetchFirebaseNews();
+</script>
+</body>
+</html>
