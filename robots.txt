@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://kamleshkushwaha9202-dot.github.io/Bharat-news-/sitemap.xml
